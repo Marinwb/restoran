@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon" />
+    <title>Restoran M</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="lightbox.css" />
+    <link rel="stylesheet" href="dishes..css" />
+  </head>
+  <body>
+    <header class="header">
+      <input class="menu-btn" type="checkbox" id="menu-btn" />
+      <label class="menu-icon" for="menu-btn"
+        ><span class="nav-icon"></span
+      ></label>
+      <ul class="menu">
+        <li><a class="active" href="#menu">Jelovnik</a></li>
+        <li><a href="#dishes">Naša preporuka</a></li>
+        <li><a href="#about">O nama</a></li>
+        <li><a href="#gallery">Galerija</a></li>
+      </ul>
+    </header>
+    <section id="hero">
+      <div class="slider">
+        <input type="radio" id="i1" name="images" checked />
+        <input type="radio" id="i2" name="images" />
+        <input type="radio" id="i3" name="images" />
+
+        <div class="slide_img" id="one">
+          <img src="./img/hero.png" />
+
+          <label class="prev" for="i3"><span>&#x2039;</span></label>
+          <label class="next" for="i2"><span>&#x203a;</span></label>
+        </div>
+
+        <div class="slide_img" id="two">
+          <img src="./img/pic1.jpg" />
+
+          <label class="prev" for="i1"><span>&#x2039;</span></label>
+          <label class="next" for="i3"><span>&#x203a;</span></label>
+        </div>
+
+        <div class="slide_img" id="three">
+          <img src="./img/pic2.jpg" />
+
+          <label class="prev" for="i2"><span>&#x2039;</span></label>
+          <label class="next" for="i1"><span>&#x203a;</span></label>
+        </div>
+
+        <div id="nav_slide">
+          <label for="i1" class="dots" id="dot1"></label>
+          <label for="i2" class="dots" id="dot2"></label>
+          <label for="i3" class="dots" id="dot3"></label>
+        </div>
+      </div>
+    </section>
+    <section id="menu">
+      <h3>Jelovnik</h3>
+      <div class="menu-list">
+        <div class="left">
+          <div class="menu-item">
+            <h4>
+              Jagnjetina u mleku <img src="./img/line.png" alt="" /> 2000 RSD
+            </h4>
+            <p class="details">Jagnjetina, povrće, slanina.</p>
+          </div>
+          <div class="menu-item">
+            <h4>
+              Leskovačka pljeskavica <img src="./img/line.png" alt="" /> 700 RSD
+            </h4>
+            <p class="details">Juneće meso, lepinja, ajvar.</p>
+          </div>
+          <div class="menu-item">
+            <h4>Komplet lepinja <img src="./img/line.png" alt="" /> 600 RSD</h4>
+            <p class="details">Lepinja, moča, jogurt.</p>
+          </div>
+          <div class="menu-item">
+            <h4>Čobanska pita <img src="./img/line.png" alt="" /> 1200 RSD</h4>
+            <p class="details">Mleveno meso, sir, krompir.</p>
+          </div>
+        </div>
+        <div class="right">
+          <div class="menu-item">
+            <h4>Sarma <img src="./img/line.png" alt="" /> 1500 RSD</h4>
+            <p class="details">Mleveno meso, kupus.</p>
+          </div>
+          <div class="menu-item">
+            <h4>
+              Punjene paprike <img src="./img/line.png" alt="" /> 1300 RSD
+            </h4>
+            <p class="details">Mleveno meso, paprika.</p>
+          </div>
+          <div class="menu-item">
+            <h4>Ćevapi <img src="./img/line.png" alt="" /> 500 RSD</h4>
+            <p class="details">Junetina, lepinja</p>
+          </div>
+          <div class="menu-item">
+            <h4>Gibanica <img src="./img/line.png" alt="" /> 700 RSD</h4>
+            <p class="details">Pita sa sirom</p>
+          </div>
+        </div>
+      </div>
+      <div class="dropdown-button">
+        <button class="trigger">
+          Pogledaj ceo jelovnik | <img src="./img/arrow.png" alt="" />
+        </button>
+      </div>
+    </section>
+    <section id="dishes">
+      <h2>Naša preporuka <img src="./img/line.png" alt="" /></h2>
+      <div class="product-container">
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://gost.rs/wp-content/uploads/2020/05/jagnjetina-u-mleku.jpg"
+              class="product-thumb"
+              alt=""
+            />
+          </div>
+          <div class="dishes-card">
+            <div class="title-card">
+              <h4>Jagnjetina u mleku</h4>
+              <h4>2000 RSD</h4>
+            </div>
+            <div class="details-card" id="increment-count">
+              <button
+                class="heart-btn"
+                onclick="document.getElementById('up-arrow').src='img/heart2.png'"
+              >
+                <input
+                  type="image"
+                  src="./img/heart1.png"
+                  class="heart"
+                  id="up-arrow"
+                />
+              </button>
+              <p><span id="total-count"></span> ljudi se sviđa</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://gost.rs/wp-content/uploads/2020/05/leskovacka-pljeskavica.jpg"
+              class="product-thumb"
+              alt=""
+            />
+          </div>
+          <div class="title-card">
+            <h4>Leskovačka pljeskavica</h4>
+            <h4>700 RSD</h4>
+          </div>
+          <div class="details-card" id="increment-count2">
+            <button
+              class="heart-btn"
+              onclick="document.getElementById('up-arrow2').src='img/heart2.png'"
+            >
+              <input
+                type="image"
+                src="./img/heart1.png"
+                class="heart"
+                id="up-arrow2"
+              />
+            </button>
+            <p><span id="total-count2"></span> ljudi se sviđa</p>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://gost.rs/wp-content/uploads/2020/05/komplet-lepinja.jpg"
+              class="product-thumb"
+              alt=""
+            />
+          </div>
+          <div class="title-card">
+            <h4>Komplet lepinja</h4>
+            <h4>600 RSD</h4>
+          </div>
+          <div class="details-card" id="increment-count3">
+            <button
+              class="heart-btn"
+              onclick="document.getElementById('up-arrow3').src='img/heart2.png'"
+            >
+              <input
+                type="image"
+                src="./img/heart1.png"
+                class="heart"
+                id="up-arrow3"
+              />
+            </button>
+            <p><span id="total-count3"></span> ljudi se sviđa</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://gost.rs/wp-content/uploads/2020/05/cobanska-pita.jpg"
+              class="product-thumb"
+              alt=""
+            />
+          </div>
+          <div class="title-card">
+            <h4>Čobanska pita</h4>
+            <h4>1200 RSD</h4>
+          </div>
+          <div class="details-card" id="increment-count4">
+            <button
+              class="heart-btn"
+              onclick="document.getElementById('up-arrow4').src='img/heart2.png'"
+            >
+              <input
+                type="image"
+                src="./img/heart1.png"
+                class="heart"
+                id="up-arrow4"
+              />
+            </button>
+            <p><span id="total-count4"></span> ljudi se sviđa</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <h2>O nama<img src="./img/line.png" alt="line" /></h2>
+      <div class="aboutus">
+        <h1 id="about-title">Restoran M - sve što volite</h1>
+        <div class="text">
+          <div class="pasus">
+            <p>
+              Restoran M je ušuškan u centru Novog Sada i doprinosi osećaju da,
+              kada posetite ovaj lokal, zaboravite na sve vaše probleme i
+              totalno se opustite u prijatnom ambijentu koji vam Lagano pruža.
+              Svojim izgledom, prostor koji je sređen u savremenom stilu,
+              podseća na najbolje svetske bar restorane iako služi samo
+              <b>domaću hranu </b> još od davne <i>1983. godine</i>. Za velikim
+              šankom rade pravi profesionalci, jednom rečju velemajstori u
+              pripremi koktela i ostalog pića. Tu su i udobni separei i stolovi
+              za kojim svaki zalogaj postaje jedna nova priča.
+            </p>
+            <hr />
+            <h5>Kod nas ćete pronaći:</h5>
+            <ul class="point">
+              <li>
+                <p class="item">Samo domaća jela</p>
+              </li>
+              <li>
+                <p class="item">Ukusne deserte po receptima naših baka.</p>
+              </li>
+              <li><p class="item">Prijatan ambijent</p></li>
+            </ul>
+          </div>
+          <div class="pasus">
+            <p>
+              Ukoliko želite da se uverite u sam kvalitet i izgled restorana M,
+              dovoljno vam govori činjenica da se isti ovakav lokal nalazi i
+              <b> u Beogradu.</b> Ne, ne morate otići u Beograd da biste
+              doživeli kvalitet, lepotu i ukus restorana M - naš Novi Sad
+              poseduje isti takav.
+            </p>
+            <div class="wrapper">
+              <blockquote>
+                <p>
+                  Dobrodošli u restoran M. Svi domaći ukusi na jednom mestu!
+                </p>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <h2>Galerija ostalih jela <img src="./img/line.png" alt="" /></h2>
+      <div class="box">
+        <div class="column1">
+          <a href="./img/img1.png" data-lightbox="food" data-title="Stapici">
+            <img src="./img/img1.png" alt="img1" />
+          </a>
+        </div>
+        <div class="column1">
+          <a href="./img/img2.png" data-lightbox="food" data-title="Kiflice">
+            <img src="./img/img2.png" alt="img2"
+          /></a>
+          <a
+            href="./img/img3.png"
+            data-lightbox="food"
+            data-title="Sumsko voce"
+          >
+            <img src="./img/img3.png" alt="img3"
+          /></a>
+        </div>
+        <div class="column1">
+          <a href="./img/img4.png" data-lightbox="food" data-title="Pizza">
+            <img src="./img/img4.png" alt="img4"
+          /></a>
+          <a href="./img/img5.png" data-lightbox="food" data-title="Pasta">
+            <img src="./img/img5.png" alt="img5"
+          /></a>
+        </div>
+      </div>
+
+      <div>
+        <a href="#hero">
+          <button class="scroll-button">
+            <img src="./img/arrowUp.png" alt="" /></button
+        ></a>
+      </div>
+    </section>
+
+    <section></section>
+    <footer>
+      <ul class="info">
+        <li>Restoran M, Novi Sad</li>
+        <li>
+          <a
+            href="https://www.google.com/maps/search/3926+Anmoore+Road+new+york/@40.0667626,-79.2503283,7z/data=!3m1!4b1"
+            >Zmaj Jovina 46</a
+          >
+        </li>
+        <li>Novi Sad, 21 000, Srbija</li>
+        <li><a href="tel:+718-749-1714">718-749-1714</a></li>
+      </ul>
+      <ul class="info">
+        <li>Restoran M, Beograd</li>
+        <li>
+          <a
+            href="https://www.google.com/maps/search/68,+rue+de+la+Couronne+75002+PARIS/@48.8589465,2.2768237,12z/data=!3m1!4b1"
+            >Knez Mihailova 113</a
+          >
+        </li>
+        <li>Beograd, 21 000, Srbija</li>
+        <li><a href="tel:02.94.23.69.56">02.94.23.69.56</a></li>
+      </ul>
+      <ul class="info">
+        <li>Jelovnik</li>
+        <li>Naša preporuka</li>
+        <li>O nama</li>
+        <li>Galerija ostalih jela</li>
+      </ul>
+      <ul class="info">
+        <li>© All Rights Reserved 2024.</li>
+      </ul>
+    </footer>
+
+    <div class="modal">
+      <div class="modal-content">
+        <span class="close-button">×</span>
+        <h4>Ceo jelovnik</h4>
+        <table style="width: 100%">
+          <tr>
+            <th>Naziv</th>
+            <th>Cena</th>
+          </tr>
+          <tr>
+            <td>Jagnjetina u mleku</td>
+            <td>2000 RSD</td>
+          </tr>
+          <tr>
+            <td>Leskovačka pljeskavica</td>
+            <td>700 RSD</td>
+          </tr>
+          <tr>
+            <td>Komplet lepinja</td>
+            <td>600 RSD</td>
+          </tr>
+          <tr>
+            <td>Čobanska pita</td>
+            <td>1200 RSD</td>
+          </tr>
+          <tr>
+            <td>Sarma</td>
+            <td>1500 RSD</td>
+          </tr>
+          <tr>
+            <td>Punjene paprike</td>
+            <td>1300 RSD</td>
+          </tr>
+          <tr>
+            <td>Ćevapi</td>
+            <td>500 RSD</td>
+          </tr>
+          <tr>
+            <td>Gibanica</td>
+            <td>700 RSD</td>
+          </tr>
+          <tr>
+            <td>Palačinke</td>
+            <td>400 RSD</td>
+          </tr>
+          <tr>
+            <td>Kolač od višanja</td>
+            <td>400 RSD</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <script src="lightbox-plus-jquery.js"></script>
+    <script src="modal.js"></script>
+    <script src="script.js"></script>
+    <script src="dishes.js"></script>
+  </body>
+</html>
